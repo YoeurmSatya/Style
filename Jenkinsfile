@@ -50,8 +50,8 @@ pipeline {
                 echo 'កំពុងទាញយក និងដាក់ឱ្យដំណើរការ...'
                 // 1. បញ្ឈប់ និងលុប Container ចាស់ (ប្រសិនបើមាន) ដើម្បីកុំឱ្យជាន់គ្នា
                 sh '''
-                    docker stop ${IMAGE_NAME}  true
-                    docker rm ${IMAGE_NAME}  true
+                    docker stop ${IMAGE_NAME} || true
+                    docker rm ${IMAGE_NAME} || true
                 '''
                 
                 // 2. ដំណើរការ Container ថ្មី
